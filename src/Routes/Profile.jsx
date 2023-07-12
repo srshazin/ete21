@@ -3,6 +3,7 @@ import AnimatedRoute from "../Components/Layout/AnimatedRoute";
 import Header from "../Components/Children/Header";
 import { useEffect, useState } from "react";
 import { MdVerified } from "react-icons/md";
+import InfoCard from "../Components/Widgets/InfoCard";
 
 const Profile = () => {
   const [profile, setProfile] = useState();
@@ -47,6 +48,18 @@ const Profile = () => {
               </div>
             </div>
             <div className="lab-4">Informations</div>
+            <div className="info-cards-container">
+              <InfoCard
+                cardTitle={"Name"}
+                cardValue={"Shahoriar Rahman"}
+                clipboard="true"
+              />
+              <InfoCard
+                cardTitle={"Email"}
+                cardValue={"Shahoriar Rahman"}
+                clipboard="true"
+              />
+            </div>
           </>
         )}
       </div>

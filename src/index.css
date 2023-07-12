@@ -374,4 +374,48 @@ svg.contact-ic {
   font-size: 21pt;
   margin-top: 2rem;
   padding: 5px 20px;
+  margin-bottom: 1.5rem;
+}
+
+.infoCardHeader {
+  padding: 13px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff24;
+}
+
+.infoCardWrapper {
+  background: #ffffff0d;
+  transition: 0.15s ease;
+}
+
+.info-cards-container {
+  width: 95%;
+  margin: auto;
+  border-radius: 13px;
+  overflow: auto;
+}
+
+.infoCardDropDownIC {
+  font-size: 15pt;
+  color: #747474;
+}
+
+.infoCardTitle {
+  font-weight: 700;
+}
+
+.infoCardBody {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 15px;
+  overflow: auto;
+  transition: 0.15 ease;
+}
+
+.infoCardCopyIc svg {
+  color: #ffffff69;
+  font-size: 15pt;
 }
