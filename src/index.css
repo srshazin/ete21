@@ -11,16 +11,17 @@
 body {
   background: #0d0e12;
   color: #e1e6f0;
+  overflow-anchor: none;
 }
 
 nav.header-logo {
   text-align: center;
   /* background: #ffffff0a; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 5rem;
-  border-bottom: 1px dashed #ffffff42;
+  height: 4rem;
+  padding: 0px 20px;
   stroke-dashoffset: 35px;
 }
 .section {
@@ -328,6 +329,8 @@ svg.contact-ic {
 .dp045dswh img {
   width: 150px;
   border-radius: 50%;
+  border: 4px solid #2196f3;
+  padding: 10px;
 }
 
 .ude7yd3i3ej {
@@ -418,4 +421,72 @@ svg.contact-ic {
 .infoCardCopyIc svg {
   color: #ffffff69;
   font-size: 15pt;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+.infoCardHeaderBar {
+  display: flex;
+  gap: 8px;
+  text-align: center;
+}
+.infoCardHeaderBar {
+  display: flex;
+  gap: 8px;
+  text-align: center;
+}
+.infoCardBody {
+  background: #1e1e23;
+}
+svg.headerBackBtn {
+  font-size: 20pt;
+  background: #31313100;
+  height: 32px;
+  width: 32px;
+  padding: 2px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transition: 0.15s;
+}
+
+svg.themeToggleBtn {
+  font-size: 18pt;
+}
+svg.headerBackBtn:active {
+  background-color: #202125;
+}
+svg.dummyBtn {
+  font-size: 20pt;
+  background: #31313100;
+  height: 32px;
+  width: 32px;
+  padding: 2px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transition: 0.15s;
+}
+
+svg.dummyBtn:active {
+  background-color: #202125;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+.dumHeader {
+  font-size: 43pt;
+  padding: 13px 0px;
+  font-weight: bold;
+  font-family: "Roboto Slab", sans-serif !important;
+}
+
+.dummified {
+  width: 90%;
+  margin: auto;
+}
+
+.dumBody {
+  font-size: 15pt;
+  line-height: 32px;
+  font-family: "Roboto Slab", sans-serif !important;
 }
