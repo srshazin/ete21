@@ -7,6 +7,16 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const handleThemeToggle = () => {
+    if (localStorage.getItem("theme") == "light") {
+      document.body.classList.remove("light-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.add("light-theme");
+      localStorage.setItem("theme", "light");
+    }
+  };
+
   return (
     <nav className="header-logo">
       {location.key !== "default" ? (
@@ -21,7 +31,7 @@ const Header = () => {
       <Link to={"/"}>
         <div className="logo-txt">ete'21</div>
       </Link>
-      <BsSunFill className="themeToggleBtn" />
+      <BsSunFill className="themeToggleBtn" onClick={handleThemeToggle} />
     </nav>
   );
 };
