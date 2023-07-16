@@ -54,6 +54,7 @@ nav.header-logo {
   height: 4rem;
   padding: 0px 20px;
   stroke-dashoffset: 35px;
+  cursor: pointer;
 }
 .section {
   margin: auto;
@@ -173,6 +174,7 @@ input.search-input:focus {
   padding: 4px 11px;
   border-radius: 22px;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 p.lab-1 {
@@ -429,10 +431,12 @@ svg.headerBackBtn {
   box-sizing: border-box;
   border-radius: 50%;
   transition: 0.15s;
+  cursor: pointer;
 }
 
 svg.themeToggleBtn {
   font-size: 18pt;
+  cursor: pointer;
 }
 svg.headerBackBtn:active {
   background-color: #202125;
@@ -475,6 +479,7 @@ svg.dummyBtn:active {
   .list-container {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
     width: 26rem;
     height: 13rem;
     justify-content: space-between;
@@ -511,4 +516,24 @@ svg.dummyBtn:active {
     width: 30rem;
     margin: auto;
   }
+  .profile_container {
+    width: 51rem;
+    margin: auto;
+    margin-top: 25px;
+  }
+  .dummified {
+    width: 37rem;
+    margin-top: 37px;
+  }
+}
+.list-container:hover {
+  background: var(--body-contrast-3);
+}
+a.foot_li0:hover {
+  color: #fff;
+}
+.\34 04_head {
+  font-size: 58pt;
+  font-weight: bold;
+  font-family: "Roboto Slab", sans-serif;
 }

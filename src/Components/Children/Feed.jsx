@@ -29,6 +29,10 @@ const Feed = () => {
         // setList(body);
         setIsPending(false);
         setConstList(body.filter((item) => item.fname != ""));
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during the request
+        alert("Oops Something went wrong. ", error);
       });
   }, []);
   useEffect(() => {

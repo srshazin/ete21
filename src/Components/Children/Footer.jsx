@@ -15,10 +15,10 @@ const Footer = () => {
         <a href="https://www.ruet.ac.bd/" className="foot_li0">
           ETE RUET Home
         </a>
-        <Link href="/" className="foot_li0">
+        <Link to="/about_ete" className="foot_li0">
           About ETE
         </Link>
-        <Link href="/about" className="foot_li0">
+        <Link to="/about_dev" className="foot_li0">
           About Developer
         </Link>
       </div>

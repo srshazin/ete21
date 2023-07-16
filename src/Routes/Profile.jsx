@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import AnimatedRoute from "../Components/Layout/AnimatedRoute";
 import Header from "../Components/Children/Header";
 import { useEffect, useState } from "react";
@@ -13,26 +13,38 @@ import Footer from "../Components/Children/Footer";
 import { BiMobile } from "react-icons/bi";
 import { FaAddressCard, FaCrown } from "react-icons/fa";
 import { IoMdSchool } from "react-icons/io";
+import Spinner from "../Components/Widgets/Spinner";
 const Profile = () => {
   const [profile, setProfile] = useState();
   const [isPending, setIsPending] = useState(true);
   const { slug } = useParams();
+  const [pageTitle, setPageTitle] = useState(null);
+  const navigate = useNavigate();
   useEffect(() => {
     fetch("/db/source.json")
       .then((data) => data.json())
       .then((body) => {
         setProfile(body.filter((item) => item.slug == slug)[0]);
-
         setIsPending(false);
-        console.log(profile);
+        setPageTitle(profile.fname);
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during the request
+        // alert("Oops Something went wrong. ", error);
       });
   }, []);
+  useEffect(() => {
+    if (!isPending) {
+      document.title = pageTitle;
+      console.log(document.title);
+    }
+  }, [pageTitle, isPending]);
   const ic_mobile = <BiMobile />;
   return (
     <AnimatedRoute>
       <Header />
       <div className="profile_container">
-        {!isPending && (
+        {!isPending && profile ? (
           <>
             <div className="ude7yd3i3ej">
               <div className="dp045dswh">
@@ -111,6 +123,12 @@ const Profile = () => {
               />
             </div>
           </>
+        ) : !isPending && profile == undefined ? (
+          navigate("/404")
+        ) : (
+          <div className="spinner-wrapper">
+            <Spinner />
+          </div>
         )}
       </div>
       <Footer />
