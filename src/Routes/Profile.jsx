@@ -14,11 +14,12 @@ import { BiMobile } from "react-icons/bi";
 import { FaAddressCard, FaCrown } from "react-icons/fa";
 import { IoMdSchool } from "react-icons/io";
 import Spinner from "../Components/Widgets/Spinner";
+import { Helmet } from "react-helmet";
 const Profile = () => {
   const [profile, setProfile] = useState();
   const [isPending, setIsPending] = useState(true);
   const { slug } = useParams();
-  const [pageTitle, setPageTitle] = useState(null);
+  const [pageTitle, setPageTitle] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
     fetch("/db/source.json")
@@ -33,16 +34,16 @@ const Profile = () => {
         // alert("Oops Something went wrong. ", error);
       });
   }, []);
-  useEffect(() => {
-    if (!isPending) {
-      document.title = pageTitle;
-      console.log(document.title);
-    }
-  }, [pageTitle, isPending]);
+
   const ic_mobile = <BiMobile />;
   return (
     <AnimatedRoute>
       <Header />
+
+      <Helmet>
+        <title>{pageTitle && pageTitle}</title>
+      </Helmet>
+
       <div className="profile_container">
         {!isPending && profile ? (
           <>
