@@ -41,7 +41,7 @@ const Profile = () => {
       <Header />
 
       <Helmet>
-        <title>{pageTitle && pageTitle}</title>
+        <title>ETE21 Member</title>
       </Helmet>
 
       <div className="profile_container">
