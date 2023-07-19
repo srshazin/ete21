@@ -50,8 +50,8 @@ const Footer = () => {
           Created with <AiFillHeart /> by <b> Shazin</b>
         </div>
         <div className="c3k30_9dsfed8d">
-          Copyright &copy; All rights reserved by admin. All logos are licensed
-          under their own trademark license.{" "}
+          Copyright &copy; 2023 ETE-21. All rights reserved by admin. All logos
+          are licensed under their own trademark license.{" "}
         </div>
       </div>
     </footer>
